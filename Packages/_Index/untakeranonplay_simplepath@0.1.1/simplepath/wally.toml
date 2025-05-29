@@ -1,0 +1,14 @@
+[package]
+name = "untakeranonplay/simplepath"
+description = "Package for pathfinding in real time based on @V3N0M_Z's SimplePath"
+license = "MIT"
+version = "0.1.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+exclude = [
+    "selene.toml", "aftman.toml", ".gitignore", "TestPlace.project.json", "TestPlace.rbxl", "README.md",
+    "src/ServerScriptService"
+]
+
+[dependencies]

@@ -1,0 +1,14 @@
+[package]
+name = "dylan/pogogame"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+ProfileService = "surnautica/profileservice@1.0.0"
+Signal = "sleitnick/signal@1.5.0"
+Promise = "evaera/promise@4.0.0"
+Net = "sleitnick/net@0.1.0"
+Janitor = "howmanysmall/janitor@1.15.6"
+CameraShaker = "brittonfischer/camerashaker@0.1.0"
+SimplePath = "untakeranonplay/simplepath@0.1.1"

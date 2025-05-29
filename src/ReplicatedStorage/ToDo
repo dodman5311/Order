@@ -1,0 +1,536 @@
+-- ToDo
+
+Make ricoshot iterate *
+Fix infinite damage on throw *
+Blood Effects *
+Make ending sequence *
+Make Death Screen *
+Fix enemies not roaming *
+make paladin shield not drop souls *
+Make premade encounters *
+Make nonhuman things not bleed *
+Fix too much Blood *
+Fix gates closing too early *
+Make player teleport when over edge *
+Fix Haven not working. *
+make everlasting shot fatter. *
+Make smart bullet check raycast *
+Fix Dying in an arena *
+Fix bullets not going though shield *
+Slot machine stand: sell one soul, get or lose luck and souls. (lil eyes in the back) *
+
+-----------------------------------------------------------
+
+Fixed infinite ammo on reload with mule bags glitch *
+
+Mule bags now auto fill to an empty slot when a weapon is picked up. It will then switch to that slot. *
+
+fixed high resolution wall materials *
+
+Made kiosk cost increase *
+
+Fixed picked up weapons persisting after death *
+
+Fixed exiting a level while an arena is active *
+
+Fixed getting stuck outside the map *
+
+Fixed kiosk not resetting soul cost on spawn *
+
+Fixed thrown weapons hitting dead bodies *
+
+Made dead bodies no collidable *
+
+Perk ticket is now spent after selecting a catagory. *
+
+Arenas will now fail if over 60% of the enemes are alive after 45 seconds *
+
+When ending a level, for every hundred points after 300, another soul is added. Example: 250 = +0, 300 = +1, 350 = +1, 400 = +2, 500 = +3, etc. *
+
+-----------------------------------------------------------------------------
+
+Add momentum *
+
+nerfed Haven to 0.5 seconds of invinciblity
+
+iron will is now not affected by luck *
+
+If the play has ricoshot, smart weapons will now target thrown guns. *
+
+If the play has ricoshot, shooting a thrown weapon will target other thrown weapons. (intial damage + 3 + 3) *
+
+If the play has ricoshot, shooting a thrown weapon will target weakspots automatically *
+
+"Do you like hurting?" changed to reduce one health instead of 25% *
+
+Moved boring bullets to perks list (50% soul delivery) *
+
+Fix perk ticket award UI *
+
+Fix voice lines *
+
+fixed guns shooting out of control when exiting *
+
+Parrying long longer gives ammo *
+
+Fix calm playing when spamming kiosk *
+fix kiosk spamming when open *
+Make Boss give perks on death *
+Make boss exit *
+Make bell move *
+
+Lowered Katana ammo count, and lowered katana fire rate.
+Paladins will now shoot upon seeing you, as apposed to waiting 3 seconds. *
+
+Bit Crush Sounds
+
+Make NPC guys - Fade away, Give ticket, Give quest, fight with you.
+
+Fix dying in arenas locking you
+
+Make arenas pause
+
+FIX PAUSING
+
+Fix infinite souls glitch
+
+Fix Slide
+
+Record sounds for dreadful
+
+Kick - Pushes and damages. Cooldown
+
+Model barrels
+
+Give enemies sounds
+
+Add setting to turn off retro filter
+
+fix level lock
+
+fix exit outside map
+
+Make boss health go away ()
+
+
+
+Every time you go without delivering souls, Drav gets hungrier and weaker, and your max health is reduced by 1.
+
+If you refuse to deliver souls while your max health is at 1, Drav will die and you will be forced to play the rest of the game with 1 health and souls disabled.
+
+However, every time you deliver souls, your max health will increase by 1 (Not going over 5).
+
+Drav is dead perk
+
+Make souls gray
+
+
+----------------------------------------------------------------------
+
+Added Righteous Motion (Quick Dash)
+Added Spiked Sabatons (Wallrunning)
+Made Master scouting change direction in air (Double Jump)
+Moved Master Scouting from perks, to upgrades (100% list)
+
+
+Changelog:
+
+Additions:
+
+Added the RIPP (Really Intuitive Plasma Pistol) (Untextured)
+
+Added everlasting miniboss
+The player now heals when completing a level
+
+Added sound effects to the Kiosk, Soul Delivery, and Death Screen 
+Added new sounds for the Militant and Divine
+
+Added ammo items to the Kiosk
+Added crit chance items to kiosk
+
+Changes:
+
+Nerfed Katana ammo to 10
+
+Buffed base soul drop chance from 2% to 3%
+
+Reduced perk ticket item chance in the Kiosk
+Reduced Luck items chance in Kiosk
+Reduced Nothing item chance in kiosk
+
+Buffed player movement speed from 25 to 30
+Buffed Lunatic movement speed from 32 to 35
+Buffed Everrlasting shot radius from 0.35 to 0.75
+
+Perks:
+
+Nerfed almost a lot of 50% perks:
+Rabbits Foot - from 10 to 5 added luck
+Deadshot - from 15% to 10% chance of damage
+Hoarder - from 50% to 25% more ammo
+Speedrunner - from 35% to 10% speed 
+Killchain - from 2 to 1 added combo seconds
+Tough shell - from 200% to 100% more armor resistance
+Boring Bullets - from 5 to 10 hits required for more damage
+
+Buffed Steel souls from 15% to 20% armor chance
+
+Added 50% Perks:
+Tough Luck - Your health is now bound to luck. The less health you have, the more luck you have. (+2 luck per lost HP)
+Speed Demon - Walking speed is now increased. (+20%)
+Heavenly Fortune - You now have more luck while in the air (+5 Luck)
+
+Added 100% Perks:
+War Drums - Picked up guns now have more ammo. (+75%)
+Unearthly Metal - Armor now has more resistance. (+200% Armor Resistance)
+Take Two - While at 1 HP, Luck Rolls are now rolled 1 additional time for a better outcome. (Kiosk rewards are excluded)
+Gambler's Fallacy - Every hit on an enemy now increases the Luck on your next Luck Roll by 1. (Can be stacked 20 times for +20 luck)
+Echoed Souls - When an enemy drops a soul, there is now a chance for the enemy to drop a second soul. The second soul disappears if it isn't picked up within 3 seconds. (20% chance)
+Unending Fortress - Upon reviving you now have a chance to be completely armored. (15% chance)
+
+
+Fixes:
+Fixed dying with more than 0 souls
+Fixed spawning in the ground when respawning (Hopefully)
+Fixed Righteous Motion (shiftlock setting)
+
+Find out where the ghosts come from
+------------------------------------------------------------------------ Omega Update:
+
+Nerfed Borus ammo count: 40 - 30
+
+Buffed RIPP ammo count: 25 - 40
+Buffed RIPP FireRate: Doubled
+Nerfed RIPP Damage: 2 - 1
+Increased RIPP Recoil
+
+Buffed I-Six lock on speed
+Buffed Boom Cannon fire rate
+
+Maps generate smaller
+
+Diasy chain has chance to apply elecricity to other guy
+
+Perk that lights things on fire if not damaged by a bullet
+
+Grapple deals 1 damage and grants invincibility (Cooldown)
+
+^^-------^^
+
+pause game > intro text > press tab to continue > menu tutorial text > end ?
+
+make arenas and ambushes a chance ?
+
+Make praying altar offering - lessens visage health - disables a perk ?
+
+Make teleport pause
+
+Fix electric sound stopping early
+
+Fix getting stuck while loading
+
+Buff spiked sabatons
+
+Reflect damage on chance perk B
+
+Add difficulty settings:
+Easy:
+3 lives.
+When dying, you will restart the current stage or bossfight until lives run out.
+-2 combo hit penalty
+
+Normal:
+When dying, you will restart the entire campaign.
+-2 combo hit penalty
+
+Hard:
+When dying, you will restart the entire campaign.
+-3 combo hit penalty
+-1 second combo time
+
+Make variant Vending machines
+
+upgrade: when at 0 souls, x6 soul chance instead of x4
+
+--
+
+Added Cutter Melee
+
+Added Bull Shot Pistol
+
+Revamped Stage 1 map
+
+Throw speed increased by 25% (Pull out pistols faster after throwing)
+
+Beating Phillip now gives you Master Scouting by default.
+
+Added Specimen enemy
+Added Resident enemy
+Added Pestilent enemy
+Added Ghoul enemy
+
+Added Specimen #09 miniboss
+Added Visage of False Hope boss
+
+Added stage 2 OST
+
+Revamped Spiked Sabatons
+Revamped Brick Hook
+
+Added visible magazines to the Cleanse and Repent
+
+Added soul drop sound
+
+Added Critical hit sound
+
+Added sounds for boss defeat sequence
+
+Crits deal double damage, instead of +1 damage
+
+Kevlar and Small magazine in the kiosk, changed to bad luck (The more luck, the lower chance for getting it)
+
+Fixed shield removing on successfull parry
+
+Added 800M : Explosive assault rifle
+
+Nerfed Set Em Up: Now capped at 20
+
+hover over delivery number now changes color
+
+Keeper's Parry sound now plays without position
+
+Added bullet holes
+
+Added paladins faith perk
+added aggressive forgery perk
+added life steal perk
+added open wounds perk
+Added Burn hell perk
+Added Tacticool perk
+
+Nerfed Quad shot pellet count: 14 to 10
+Nerfed Double Shot pellet count: 8 to 5
+
+Changed how spread is processed (More shotgun feeling shotguns)
+
+Changed fire sound for Quad Shot
+
+Changed texture for quad shot
+
+Lowered ammo for RIPP
+
+Buffed I-Six:
+I-Six deals 3 damage. Every 2 locks reduces the damage by 1.
+Lock on speed increased
+Massively increased locking power (Misses less)
+Lowered bullet speed (Misses even less)
+Ammo reduced to 6
+Fire Rate reduced
+
+Buffed Boom Cannon:
+Heavily increased firerate
+Heavily reduced recoil
+Increased ammo from 10 to 12
+
+Added main menu:
+Map
+Arsenal
+Codex - Lore and Tutorials
+Settings
+
+Removed roblox's reset button
+Added restart run button to settings menu (Fixes floor camera glitch)
+
+Combo hit penalty increased from -1 to -2
+Soul chance capped at 75%
+
+Added ambushes: Single wave, hardcore, arenas that activate if you have 3 souls or above.*
+Picked up weapons no longer count towards final score (Bold)
+Completed arenas now count towards final score
+
+Added elements:
+Fire - increases enemy soul chance, will explode if killed.
+Ice - Freezes enemy in place. Has a chance to drop armor if killed.
+Electricity - Slows walkspeed, reduced accuracy, 50% chance to cancel a shot.
+Soul - Takes +1 damage, will not drop a soul.
+
+Added vending machines:
+Throw your weapon at it for a new weapon, some armor, and a chance to get next stage weapons or elemental weapons.
+
+Enemy melees no longer damage other enemies
+Added Harpoons
+
+Thrown weapons now ignite barrels
+
+Fixed I-Six locking onto ghosts
+
+Fixed Death by floor glitch
+
+Fixed master scouting breaking after death
+Fixed Wax On breaking after death
+Fixed spiked sabatons breaking after death
+
+Fixed boss health staying after kill and after death
+fixed ricoshot icon not hiding when on the ground
+fixed ricoshot targeting weapons on the ground.
+
+fixed acid not working sometimes
+fixed healing going over the health limit
+
+-----------------
+
+Add sound to take two
+
+Add hist exam
+
+Add pizza boss
+
+change black hole health
+
+add damage numbers
+
+Make different arena/ambush variants
+
+Trench coat guy
+
+Add perk ticket if dup perk (Miniboss)
+
+Save data 
+
+Tutorials
+
+Kiosk??? HOW FIX??
+
+BURGER MODE - change all weapons to burger and all names in the arsenal to burger
+
+a computer on spawn that you can look stuff up on. (LOOOOOREE)
+
+Lockers (Store cool weapon) (Perk for 2 slots)
+Add 3 lives? (As a perma upgrade)
+
+visage melee resistance
+
+Change perk award UI
+
+* Move master scouting to special perk list
+
+* Redesign arenas
+* Fix mule bags reload glitch
+
+
+----------------------------------------------------------------------------------------
+* Luck codex entry
+
+* Nerfed fast mags
+
+* Nerfed Kill chain
+
+* Fix barrels and machines health increasing with upgrade
+
+Select perk list()
+
+Art gallery
+
+Fix grapple pausing issue
+
+Change brick oven
+
+Add stat buffs to keeper perks
+
+Shotgun rail rifle
+
+Challenge mode
+
+--
+
+rebalance arenas (cross, pillars)
+
+Fixed and slightly rebalanced paladins *
+
+Remake miniboss perk UI *
+
+lower fog *
+
+add ledge grab *
+
+Generate map -> generate ziprails -> generate buildings in a 50x50 grid
+
+ziprails
+
+grapple point *
+
+dash refils
+
+change atmosphere offset
+
+make priest *
+
+Make rain!! *
+
+make parry sword: *
+
+add player health bar when adding more HP
+
+Fixed specimen #09 cleanup issues *
+
+Fixed perk tickets persisting after death *
+
+Fixed boring bullets not resetting with projectile misses *
+
+Make immunity codex page
+
+Apostles feel a liiittle weak (More health, faster bullets)
+
+FIX GRAPPLE CLIPPING (All clipping in stage 2)
+FIX Keeper death *
+FIX Arena pausing
+Add soul walls
+Add ambush walls for stage 2
+make ambush walls destroy when ambush ends
+Fix clipping on teleport (Velocity + loading glitch)
+
+When caught in a GIB, add blood screen
+
+add waterfall particle effects
+
+Attempt water screen effects
+
+add subtitles for bosses
+
+----------------------------------------------------------------------------------------
+
+--Stuff you seemed to agree with :
+
+    Adding back the missing suburbs unit *
+
+    New enemy/barrel spawn in the stone stairs unit *
+
+    Weakpoints for paladins *
+
+    Adding signs with skulls at the entrance of arenas
+    Arena wave/spawn patterns
+    Arena difficulty indicator
+    Despawning animation for ambushes/arenas
+    Outlines for remaining enemies in arena wave
+
+    Redesigning the big acid pit sewer arena
+    Enlarging the sewer doorway unit
+
+    Double shot perk rename into "Loose Cannon" *
+
+    Prevent enemies from walking into hampter room on stage 3
+
+--Stuff for cream soda :
+
+    public park arena unit ?
+    new background decorations ?
+
+--Stuff that seemed hard to put in place :
+
+    Preventing teleporters from spawning in arenas
+    Fixing the missing pathway of that one arena unit
+
+Personal preferences I didn't get to go over / get an answer for :
+
+    Making luck a little rarer in the kiosk (to make luck perks more interesting to get and making arsenal chance perks less op)
+    Deadshot / Double Shot (aka Loose Cannon) / Boring Bullets nerf ?

@@ -1,0 +1,36 @@
+{
+  "name": "Order",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/ReplicatedStorage"
+      },
+      "Gui": {
+        "$path": "src/Gui"
+      },
+
+      "Packages": {
+        "$path": "Packages"
+      },
+      "Vendor": {
+        "$path": "Vendor"
+      },
+      "Assets": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true
+      }
+    },
+
+    "ServerScriptService": {
+      "$path": "src/ServerScriptService"
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "src/StarterPlayerScripts"
+      }
+    }
+  }
+}
