@@ -10,8 +10,15 @@
         "editor.formatOnSave": true,
         "editor.formatOnPaste": true,
     },
+    "[luau]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+    },
     "robloxLsp.diagnostics.globals": [
         "version"
     ],
-    "stylua.targetReleaseVersion": "latest"
+    "stylua.targetReleaseVersion": "latest",
+    "luau-lsp.completion.imports.enabled": true,
+    //"luau-lsp.plugin.enabled": true
 }

@@ -1,0 +1,39 @@
+name = "dodman531/order"
+version = "0.1.0"
+description = "FPSp"
+authors = ["dodman531"]
+repository = "https://github.com/dodman5311/Order"
+license = "MIT"
+
+[engines]
+pesde = "^0.7.0"
+lune = "^0.8.9"
+
+[target]
+environment = "roblox"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[wally_indices]
+default = "https://github.com/UpliftGames/wally-index"
+
+[scripts]
+roblox_sync_config_generator = ".pesde/scripts/roblox_sync_config_generator.luau"
+sourcemap_generator = ".pesde/scripts/sourcemap_generator.luau"
+
+[dev_dependencies]
+scripts = { name = "pesde/scripts_rojo", version = "^0.1.1", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
+luau_lsp = { name = "pesde/luau_lsp", version = "^1.53.0", target = "lune" }
+selene = { name = "pesde/selene", version = "^0.29.0", target = "lune" }
+stylua = { name = "pesde/stylua", version = "^2.1.0", target = "lune" }
+
+[dependencies]
+ProfileService = { wally = "surnautica/profileservice", version = "^1.0.0" }
+Signal = { wally = "sleitnick/signal", version = "^2.0.3" }
+Promise = { wally = "evaera/promise", version = "^4.0.0" }
+Net = { wally = "sleitnick/net", version = "^0.1.0" }
+Janitor = { wally = "howmanysmall/janitor", version = "^1.15.6" }
+SimplePath = { wally = "untakeranonplay/simplepath", version = "^0.1.1" }
+CameraShaker = { wally = "brittonfischer/camerashaker", version = "^0.1.0" }

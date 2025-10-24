@@ -12,7 +12,7 @@
       },
 
       "Packages": {
-        "$path": "Packages"
+        "$path": "roblox_packages"
       },
       "Vendor": {
         "$path": "Vendor"
