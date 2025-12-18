@@ -85,7 +85,7 @@ function module:stopAnimation(subject: Model, animationName: string, fadeTime: n
 	if not animation then
 		return
 	end
-	self:getAnimation(subject, animationName):Stop(fadeTime)
+	animation:Stop(fadeTime)
 	return animation
 end
 

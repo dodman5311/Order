@@ -3,23 +3,26 @@ local movementController = {}
 --// Services
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local StarterPlayer = game:GetService("StarterPlayer")
 
 --// Instances
 local player = Players.LocalPlayer
 local camera = workspace.CurrentCamera
 
 --// Modules
+local GlobalInputService = require(StarterPlayer.StarterPlayerScripts.Client.Services.GlobalInputService)
 local Globals = require(ReplicatedStorage.Shared.Globals)
-local GlobalInputService = require(Globals.Client.Services.GlobalInputService)
+
 local Acts = require(Globals.Vendor.Acts)
-local Viewmodel = require(Globals.Vendor.ViewmodelService)
 local AnimationService = require(Globals.Vendor.AnimationService)
 local Util = require(Globals.Vendor.Util)
+local Viewmodel = require(Globals.Vendor.ViewmodelService)
 
 --// Values
 
-local WALK_SPEED = 10
-local SPRINT_SPEED = 16
+local JUMP_HEIGHT = 5
+local WALK_SPEED = 16
+local SPRINT_SPEED = 22
 
 --// Functions
 
@@ -88,10 +91,14 @@ function movementController:OnDied()
 end
 
 function movementController:OnSpawn(character: Model)
-	GlobalInputService.CreateNewInput("Sprint", sprintKey, Enum.KeyCode.LeftShift)
+	--GlobalInputService.CreateInputAction("Sprint", sprintKey, Enum.KeyCode.LeftShift)
 
 	local humanoid: Humanoid = character:WaitForChild("Humanoid")
 	humanoid.WalkSpeed = WALK_SPEED
+
+	humanoid.UseJumpPower = false
+	humanoid.JumpHeight = JUMP_HEIGHT
+
 	-- for _ = 1, 3 do
 	-- 	setCharacterPhysics(character)
 	-- end

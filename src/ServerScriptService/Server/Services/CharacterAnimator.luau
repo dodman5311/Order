@@ -14,17 +14,14 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 --// Services
 
 local RUN_SERVICE = game:GetService("RunService")
+local AnimationService = require(ReplicatedStorage.Vendor.AnimationService)
 
 --// Instances
 
 --// Modules
-local Globals = require(ReplicatedStorage.Shared.Globals)
-local AnimationService = require(Globals.Vendor.AnimationService)
 
 --// Values
 local characters = {}
-
-angle = 0
 
 --// Functions
 
@@ -41,7 +38,7 @@ local function calculageSpeedAngle(character)
 	local zVelocity = -relativeVelocity.Z
 	local xVelocity = math.abs(relativeVelocity.X)
 
-	local velocity = zVelocity
+	velocity = zVelocity
 
 	if zVelocity > -0.1 then
 		velocity = math.clamp(zVelocity, xVelocity, math.huge)
@@ -105,7 +102,7 @@ local function runStep(dt, characterData: characterData)
 		rightHip.C0 = characterData.logRightHipC0
 		neck.C0 = characterData.logNeckC0
 
-		AnimationService:stopAnimation(character, "Walk", "Movement")
+		AnimationService:stopAnimation(character, "Walk")
 		desiredAngle = 0
 	else -- Moving
 		local walkAnim = AnimationService:playAnimation(character, "Walk", "Movement", true)

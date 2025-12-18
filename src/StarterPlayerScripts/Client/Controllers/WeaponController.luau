@@ -30,6 +30,7 @@ local weaponAmmo = {
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
+local StarterPlayer = game:GetService("StarterPlayer")
 local UserInputService = game:GetService("UserInputService")
 
 --// Instances
@@ -42,16 +43,18 @@ local player = Players.LocalPlayer
 
 --// Modules
 local Globals = require(ReplicatedStorage.Shared.Globals)
+
 local Acts = require(Globals.Vendor.Acts)
-local ViewmodelService = require(Globals.Vendor.ViewmodelService)
 local AnimationService = require(Globals.Vendor.AnimationService)
-local Util = require(Globals.Vendor.Util)
-local DamageService = require(Globals.Client.Services.DamageService)
-local GlobalInputService = require(Globals.Client.Services.GlobalInputService)
-local Spring = require(Globals.Vendor.Spring)
-local Net = require(Globals.Packages.Net)
 local BulletHit = require(Globals.Client.Services.BulletHit)
+local DamageService = require(Globals.Client.Services.DamageService)
+local GlobalInputService = require(StarterPlayer.StarterPlayerScripts.Client.Services.GlobalInputService)
+
+local Net = require(Globals.Packages.Net)
+local Spring = require(Globals.Vendor.Spring)
 local Timer = require(Globals.Vendor.Timer)
+local Util = require(Globals.Vendor.Util)
+local ViewmodelService = require(Globals.Vendor.ViewmodelService)
 
 local HUD = require(Globals.Client.Services.HUDService)
 
@@ -147,14 +150,16 @@ local function equipWeapon(weaponName: string)
 	local equipAnimation = AnimationService:playAnimation(viewmodel.Model, "Equip", "Action")
 
 	local startTime = os.clock()
+
 	repeat
 		task.wait()
-	until AnimationService:getAnimation(viewmodel.Model, "Equip").Length > 0 or os.clock() - startTime >= 2
+	until equipAnimation.Length > 0 or os.clock() - startTime >= 2
+
 	viewmodel:Show()
 
 	HUD:ShowCrosshair(weaponName)
 
-	equipAnimation.Stopped:Wait()
+	task.wait(equipAnimation.Length)
 	Acts:removeAct("Switching")
 end
 
@@ -585,18 +590,17 @@ function weaponController:OnSpawn() end
 
 function weaponController:Init()
 	createViewmodel()
-	GlobalInputService.CreateNewInput("Attack", attackInput, Enum.UserInputType.MouseButton1, Enum.KeyCode.ButtonL2)
-	GlobalInputService.CreateNewInput("Reload", reloadInput, Enum.KeyCode.R, Enum.KeyCode.ButtonX)
-	GlobalInputService.CreateNewInput("Alt", altInput, Enum.UserInputType.MouseButton2, Enum.KeyCode.ButtonR2)
-	GlobalInputService.CreateNewInput(
+	GlobalInputService.CreateInputAction("Attack", attackInput, Enum.UserInputType.MouseButton1, Enum.KeyCode.ButtonL2)
+	GlobalInputService.CreateInputAction("Reload", reloadInput, Enum.KeyCode.R, Enum.KeyCode.ButtonX)
+	GlobalInputService.CreateInputAction("Alt", altInput, Enum.UserInputType.MouseButton2, Enum.KeyCode.ButtonR2)
+	GlobalInputService.CreateInputAction(
 		"SwitchWeapon",
 		switchWeaponInput,
-		Enum.KeyCode.One,
-		Enum.KeyCode.Two,
+		{ Enum.KeyCode.One, Enum.KeyCode.Two, Enum.KeyCode.Q },
 		Enum.KeyCode.ButtonY
 	)
 
-	GlobalInputService.CreateNewInput("Sword", function(inputState)
+	GlobalInputService.CreateInputAction("Sword", function(inputState)
 		if inputState ~= Enum.UserInputState.Begin then
 			return
 		end

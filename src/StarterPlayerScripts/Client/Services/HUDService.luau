@@ -14,8 +14,9 @@ local sounds = assets.Sounds
 
 --// Modules
 local Globals = require(ReplicatedStorage.Shared.Globals)
-local Util = require(Globals.Vendor.Util)
+
 local DamageService = require(Globals.Client.Services.DamageService)
+local Util = require(Globals.Vendor.Util)
 local ViewmodelService = require(Globals.Vendor.ViewmodelService)
 
 --// Values
@@ -94,7 +95,7 @@ local function shiftCrosshair(crosshair: Instance, hide: boolean?)
 		Util.tween(crosshair, ti, { ImageTransparency = transparencyGoal })
 	end
 
-	for _, imageLabel: ImageLabel in ipairs(crosshair:GetChildren()) do
+	for _, imageLabel in ipairs(crosshair:GetChildren()) do
 		Util.tween(imageLabel, ti, { ImageTransparency = transparencyGoal })
 	end
 end
@@ -132,7 +133,7 @@ function HUD:PumpCrosshair()
 end
 
 local function setHitmarkerColor(frame: Frame, color: Color3)
-	for _, line: Frame in ipairs(frame:GetChildren()) do
+	for _, line in ipairs(frame:GetChildren()) do
 		if not line:IsA("Frame") then
 			continue
 		end

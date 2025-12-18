@@ -2,15 +2,10 @@
   "name": "Order",
   "tree": {
     "$className": "DataModel",
-
     "ReplicatedStorage": {
       "Shared": {
         "$path": "src/ReplicatedStorage"
       },
-      "Gui": {
-        "$path": "src/Gui"
-      },
-
       "Packages": {
         "$path": "roblox_packages"
       },
@@ -22,11 +17,9 @@
         "$ignoreUnknownInstances": true
       }
     },
-
     "ServerScriptService": {
       "$path": "src/ServerScriptService"
     },
-
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "$path": "src/StarterPlayerScripts"
